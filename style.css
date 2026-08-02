@@ -84,15 +84,16 @@ body * {
   border: 0;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
+  top: -15%;
   z-index: 1;
-  transform: translateY(-50%);
-  animation: slide-out 0.4s; /*Não precisa do forwars ja que possui o left: 0 como padrão */
   left: 0;
+  /*transform: translateY(-50%);*/
+  animation: slide-out 0.7s; /*Não precisa do forwars ja que possui o left: 0 como padrão */
 }
 
 .light #switch button {
-  animation: slide-in 0.4s forwards;
+  background: white var(--switch-bg-url) no-repeat center;
+  animation: slide-in 0.7s forwards;
 }
 
 #switch button:hover {
@@ -181,11 +182,11 @@ footer {
     --bg-url: url(./assets/background-white.png);
   }
 }
-
 /*Animation */
 @keyframes slide-in {
   from {
-    left: 0;
+    left: 0%;
+    transform: rotate(360deg);
   }
   to {
     left: 50%;
@@ -193,6 +194,7 @@ footer {
 }
 @keyframes slide-out {
   from {
+    transform: rotate(360deg);
     left: 50%;
   }
   to {
