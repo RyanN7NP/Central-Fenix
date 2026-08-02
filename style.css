@@ -12,6 +12,7 @@
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --icon-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon.svg);
+  --highlight-color: rgba(255, 255, 255, 0.2);
 }
 
 .light {
@@ -22,6 +23,7 @@
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --icon-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
+  --highlight-color: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -47,7 +49,8 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   /*border: 1px solid red;*/
   margin: 56px auto 0px auto;
   padding: 0 24px;
@@ -88,16 +91,20 @@ body * {
   background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
-
   position: absolute;
-  z-index: 1;
   top: 50%;
+  z-index: 1;
   transform: translateY(-50%);
+  animation: slide-back 0.2s;
 }
 
 .light #switch button {
   right: 0;
   left: initial;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -165,40 +172,9 @@ ul li a:hover {
   background: var(--icon-color);
 }
 
-/*#rodape {
-  display: flex;
-  padding: 24px 0;
-  align-items: center;
-  justify-content: center;
-  text-decoration: underline;
-  decoration
-}*/
-
 footer {
   color: var(--text-color);
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
-  /*display: table;
-  margin: 0 auto;
-  text-align: center;
-  text-decoration: none;
-  align-items: center;
-  
-  padding-bottom: 1px;
-  font-size: 14px;
-  /*display: flex;
-  padding: 24px 0;
-  align-items: center;
-  justify-content: center;
-  text-decoration: underline;
-  */
 }
-/*.link-rodape {
-  text-decoration: none;
-}
-
-footer ion-icon {
-  display: inline-block;
-  vertical-align: -2px;
-}*/
