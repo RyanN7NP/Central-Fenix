@@ -5,29 +5,28 @@
 }
 
 :root {
-  --cor: white;
-  --background: url(./assets/background.png);
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
-  --icon-color: rgba(255, 255, 255, 0.2);
-  --switch-bg-url: url(./assets/moon.svg);
   --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon.svg);
 }
 
 .light {
-  --cor: Black;
-  --background: url(./assets/background-white.png);
+  --text-color: Black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
-  --icon-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(./assets/sun.svg);
   --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
 }
 
 body {
-  background: var(--background) no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
   /*
   background-image: url(./assets/bg-mobile.jpg);
   background-repeat: no-repeat;
@@ -36,16 +35,9 @@ body {
   /*background: color image repeat position/size*/
 }
 
-@media screen and (max-width: 767px) {
-  body {
-    background-color: lightblue; /* Cor ou imagem para celular */
-    color: black;
-  }
-}
-
 body * {
   font-family: "Inter", sans-serif;
-  color: var(--cor);
+  color: var(--text-color);
 }
 
 #container {
@@ -147,7 +139,7 @@ ul li a {
 /*pseudo-selector */
 ul li a:hover {
   background: var(--surface-color-hover);
-  border: 1.5px solid var(--cor);
+  border: 1.5px solid var(--text-color);
 }
 
 /*Social Links*/
@@ -169,7 +161,7 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-  background: var(--icon-color);
+  background: var(--highlight-color);
 }
 
 footer {
@@ -177,4 +169,15 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/*Media queries*/
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/background.png);
+  }
+
+  .light {
+    --bg-url: url(./assets/background-white.png);
+  }
 }
