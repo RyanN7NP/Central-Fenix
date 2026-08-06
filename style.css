@@ -23,7 +23,6 @@
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
 }
-
 body {
   background: var(--bg-url) no-repeat top center/cover;
   height: 100vh;
@@ -121,17 +120,16 @@ ul {
 
 ul li a {
   display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+  text-align: center;
   align-items: center;
   justify-content: center;
-
   padding: 16px 24px;
-
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   border-radius: 8px;
-
   backdrop-filter: blur(4px);
-
   text-decoration: none;
   font-weight: bold /*ou 500*/;
   transition: background 0.5s;

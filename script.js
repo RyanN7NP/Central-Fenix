@@ -1,5 +1,11 @@
+const html = document.documentElement
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+
+if (!prefersDark) {
+  html.classList.add("light")
+}
 function toggleMode() {
-  const html = document.documentElement /* Representação do nosso documento*/
+  const html = document.documentElement /*Representação do nosso documento*/
   html.classList.toggle("light")
 
   //pegar a tag img

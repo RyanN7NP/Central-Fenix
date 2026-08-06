@@ -1,0 +1,17 @@
+- [ ] Não deterministica; probabilistica;
+- [ ] Contexto
+- [ ] LLM: Large Language Model
+- [ ] Autocomplete
+- [ ] Active recall
+- [ ] Explicações
+  - [ ] Cuidados: nem sempre tudo é verdade
+  - [ ] Alucinação
+- [ ] Agentes: Agente, Ask (tirar dúvidas, pensar junto, ter ideias, explicar...)
+- [ ] Planejar então gerar (Plan)
+- [ ] Gerar então explicar (Agente)
+- [ ] Motivação com micro vitórias
+- [ ] Tree of Thought: Árvore de pensamento
+- [ ] Documentação
+- [ ] Metodologia PARE: Pergunte, Anote, Revise, Explique
+- [ ] Reescreva!
+- [ ] Entender, escrever, resolver
